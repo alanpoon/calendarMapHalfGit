@@ -877,7 +877,7 @@ elx.bundle.type.calendarMapHalf = {
 
 <div class='elx-script'>
 var $, div, getDefaultOffDays, holidayItem, monthPath, sundayFn, testdate, url1, view;
- 
+ var leave_TypeArr,minYear,maxYear; //variable to be called by maybe
   $ = jQuery;
 div = $("#${id}");
 
@@ -891,7 +891,7 @@ var csv=${code};
 
 console.log("csv",JSON.stringify(csv));
  d3.csv(url1, function(error, urlData) {
-            var Leave_TypeArr, color, csv1, csv2, csv3, csv4, data, date, day, format, holiday_Color,
+            var color, csv1, csv2, csv3, csv4, data, date, day, format, holiday_Color,
                 legend, legendArr, legendDiv, month, percent, rect, sundayArr, sunday_Color, svg, totalSunday, week, year;
             csv1 = [];
             csv3 = [];
@@ -997,8 +997,8 @@ console.log("csv",JSON.stringify(csv));
                 maxYear = minYear;
             } else {
                 var yearArr = _.pluck(csv3, 'Year');
-                var minYear = parseInt(_.min(yearArr));
-                var maxYear = parseInt(_.max(yearArr));
+                minYear = parseInt(_.min(yearArr));
+                 maxYear = parseInt(_.max(yearArr));
             }
             sundayArr = sundayFn(minYear, maxYear, totalSunday);
             sundayArr.forEach(function(d, i) {
@@ -1059,9 +1059,6 @@ console.log("csv",JSON.stringify(csv));
             console.log("csv4", JSON.stringify(csv4));
             console.log("urlData", JSON.stringify(urlData));
 
-            window.Leave_TypeArr = Leave_TypeArr;
-            window.minYear = minYear;
-            window.maxYear = maxYear;
     
 function getDefaultOffDays(year) {
     var offdays = new Array();
@@ -1111,7 +1108,7 @@ function maybe(width, height, cellSize) {
     week = d3.time.format("%U");
     percent = d3.format(".1%");
     format = d3.time.format("%Y-%m-%d");
-    svg = d3.select("#${id}").selectAll("svg").data(d3.range(window.minYear, window.maxYear + 1)).enter()
+    svg = d3.select("#${id}").selectAll("svg").data(d3.range(minYear, maxYear + 1)).enter()
         .append("svg")
         .attr("width", width).attr("height", height).attr("class", "RdYlGn").append("g")
         .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (10) + ")");
@@ -1168,7 +1165,7 @@ function maybe(width, height, cellSize) {
     legend = legendDiv.append("svg").attr("class", "RdYlGn").attr("width", 960).append("g")
         .attr("class", "Legend").attr("x", 20).attr("y", 0).attr("height", 0).attr("width", 960)
         .attr("transform", "translate(" + 20 + "," + 140 + ")");
-    legend.selectAll("g").data(window.Leave_TypeArr).enter().append("g").each(function(d, i) {
+    legend.selectAll("g").data(Leave_TypeArr).enter().append("g").each(function(d, i) {
         var g;
         g = d3.select(this);
         var xIndex = Math.floor(i / 2);
