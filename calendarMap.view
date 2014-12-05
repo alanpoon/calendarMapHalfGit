@@ -1,0 +1,949 @@
+<<<<<<<=view-json=
+{
+  "id":"calendarMap",
+  "name":"CalendarMap",
+  "category":"Chart",
+  "default":{
+    "jsonClass":"View",
+    "elxType":"View",
+    "vtype":"bundle",
+    "state":"visible",
+    "isContainer":false,
+    "position":{
+      "jsonClass":"Position",
+      "elxType":"Position",
+      "height":"480",
+      "width":"700",
+      "zIndex":"auto"
+    },
+    "data":{
+      "jsonClass":"DataEmbedded",
+      "datasource":{
+        "jsonClass":"DataSource",
+        "name":"initData",
+        "stype":"Data",
+        "desc":"default data",
+        "schema":{
+          "jsonClass":"Schema",
+          "caseSensitive":false,
+          "columns":[{
+            "jsonClass":"SchemaColumn",
+            "name":"Event",
+            "dtype":"String",
+            "attrs":[]
+          },{
+            "jsonClass":"SchemaColumn",
+            "name":"Start_of_Leave",
+            "dtype":"Date",
+            "attrs":[]
+          },{
+            "jsonClass":"SchemaColumn",
+            "name":"Number_of_Days",
+            "dtype":"Double",
+            "attrs":[]
+          },{
+            "jsonClass":"SchemaColumn",
+            "name":"Leave_Type",
+            "dtype":"String",
+            "attrs":[]
+          }]
+        },
+        "data":{
+          "jsonClass":"DataRecords",
+          "records":[
+          {
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2016-06-01"
+              },{
+              "jsonClass":"Field",
+              "value":3
+              },{
+              "jsonClass":"Field",
+            "value":"Annual"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP002"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-08-13"
+              },{
+              "jsonClass":"Field",
+              "value":4
+              },{
+              "jsonClass":"Field",
+            "value":"Child Care"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP003"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-10-28"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Compassionate"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-10-09"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Hospitalisation"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP002"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-11-05"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Marriage"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP003"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-12-06"
+              },{
+              "jsonClass":"Field",
+              "value":3
+              },{
+              "jsonClass":"Field",
+            "value":"Medical"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-12-22"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"National Service"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-12-26"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"No Pay"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP004"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-07-14"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"Off-In-Lieu"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP005"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-04-15"
+              },{
+              "jsonClass":"Field",
+              "value":7
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP006"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-01-12"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP007"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-12-13"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-08-05"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP002"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-10-16"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP003"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-05-09"
+              },{
+              "jsonClass":"Field",
+              "value":3
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-10-05"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP002"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-02-06"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP003"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-07-27"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-12-21"
+              },{
+              "jsonClass":"Field",
+              "value":1
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP001"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-07-23"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP004"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-04-15"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP005"
+              },{
+              "jsonClass":"Field",
+            "value":"2015-02-12"
+              },{
+              "jsonClass":"Field",
+              "value":2
+              },{
+              "jsonClass":"Field",
+            "value":"Unpaid LeaveUrgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP006"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-08-13"
+              },{
+              "jsonClass":"Field",
+              "value":7
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            },{
+            "jsonClass":"Record",
+            "fields":[{
+              "jsonClass":"Field",
+            "value":"EMP007"
+              },{
+              "jsonClass":"Field",
+            "value":"2014-08-04"
+              },{
+              "jsonClass":"Field",
+              "value":3
+              },{
+              "jsonClass":"Field",
+            "value":"Urgent"
+              }]
+            }]
+         }
+      },
+      "directive":""
+    },
+    "typeinfo":{
+      "jsonClass":"Bundle",
+      "type":"calendarMap",
+      "data":{
+        "startTimeCol":"Start_of_Leave",
+        "leaveTypeCol":"Leave_Type",
+        "numberDaysCol":"Number_of_Days",
+        "eventCol":"Event"       
+      },
+      "url":"repository:/HCBI_20140815/datasource/data/3a1HolidayCSV.csv",
+      "width":960,
+      "height":136,
+           "cellSize":17,
+      "legendSpacing":120,
+      "legendArr":"Sunday,Holiday,Annual,Child Care,Compassionate,Hospitalization,Marriage,Medical,National Service      ,No Pay,Off-in-lieu,Urgent"
+     
+    }
+  },
+  "includes":["/elx/lib/d3.v3.min.js"],
+  "edit-section":[{
+    "id":"view",
+    "name":"View"
+  },{
+    "id":"data",
+    "name":"Data"
+  },{
+    "id":"calendarMap",
+    "name":"CalendarMap"
+  },{
+    "id":"filters",
+    "name":"Filters"
+  }]
+}
+========
+<<<<<<<=edit-json=
+{
+  "jsonClass":"ViewSectionGroup",
+  "id":"calendarMap",
+  "groups":[{
+    "jsonClass":"Group",
+    "label":"Data",
+    "rows":[{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-height-label",
+        "type":"label",
+        "text":"Chart Height"
+      },{
+        "jsonClass":"Field",
+        "id":"typeinfo-height",
+        "type":"field",
+        "value":"${typeinfo.height}",
+        "readonly":false
+      }]
+    },{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-width-label",
+        "type":"label",
+        "text":"Chart Width"
+      },{
+        "jsonClass":"Field",
+        "id":"typeinfo-width",
+        "type":"field",
+        "value":"${typeinfo.width}",
+        "readonly":false
+      }]
+    }, {
+      "jsonClass":"Row",
+      "cols":[
+        {
+          "jsonClass":"Label",
+          "id":"typeinfo-url-label",
+          "type":"label",
+          "text":"Holiday csv URL"
+        },
+        {
+          "jsonClass":"Field",
+          "id":"typeinfo-url",
+          "type":"field",
+          "value":"${typeinfo.url}",
+          "readonly":false
+        },
+        {
+          "jsonClass":"Button",
+          "id":"typeinfo-url-repo-button",
+          "type":"button",
+          "text":"Repository"
+        }
+      ]
+    }]
+  },{
+    "jsonClass":"Group",
+    "label":"Title",
+    "rows":[{
+    "jsonClass":"Row",
+    "cols":[{
+      "jsonClass":"Label",
+      "id":"typeinfo-startTimeCol-label",
+      "type":"label",
+      "text":"StartTime Column"
+    },{
+      "jsonClass":"SchemaColumnSelect",
+      "id":"typeinfo-startTimeCol",
+      "type":"select-schema-column",
+      "value":"${typeinfo.categoryCol}"
+      }]
+    },{
+    "jsonClass":"Row",
+    "cols":[{
+      "jsonClass":"Label",
+      "id":"typeinfo-leaveTypeCol-label",
+      "type":"label",
+      "text":"LeaveType Column"
+    },{
+      "jsonClass":"SchemaColumnSelect",
+      "id":"typeinfo-leaveTypeCol",
+      "type":"select-schema-column",
+      "value":"${typeinfo.leaveTypeCol}"
+      }]
+    },{
+    "jsonClass":"Row",
+    "cols":[{
+      "jsonClass":"Label",
+      "id":"typeinfo-numberDaysCol-label",
+      "type":"label",
+      "text":"Number of Days Column"
+    },{
+      "jsonClass":"SchemaColumnSelect",
+      "id":"typeinfo-numberDaysCol",
+      "type":"select-schema-column",
+      "value":"${typeinfo.numberDaysCol}"
+      }]
+    },{
+    "jsonClass":"Row",
+    "cols":[{
+      "jsonClass":"Label",
+      "id":"typeinfo-eventCol-label",
+      "type":"label",
+      "text":"Event Column"
+    },{
+      "jsonClass":"SchemaColumnSelect",
+      "id":"typeinfo-eventCol",
+      "type":"select-schema-column",
+      "value":"${typeinfo.eventCol}"
+      }]
+    },{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-cellSize-label",
+        "type":"label",
+        "text":"Cell Size"
+      },{
+        "jsonClass":"Field",
+        "id":"typeinfo-cellSize",
+        "type":"field",
+        "value":"${typeinfo.cellSize}",
+        "readonly":false
+      }]
+    },{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-legendSpacing-label",
+        "type":"label",
+        "text":"Legend Spacing"
+      },{
+        "jsonClass":"Field",
+        "id":"typeinfo-legendSpacing",
+        "type":"field",
+        "value":"${typeinfo.legendSpacing}",
+        "readonly":false
+      }]
+    },{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-legendArr-label",
+        "type":"label",
+        "text":"Legend Arr"
+      },{
+        "jsonClass":"Field",
+        "id":"typeinfo-legendArr",
+        "type":"field",
+        "value":"${typeinfo.legendArr}",
+        "readonly":false
+      }]
+    }]
+  }]
+}
+========
+<<<<<<<=edit-js=
+elx.bundle.type.calendarMap = {
+
+  	init : function(view) {
+      
+   $("#typeinfo-height").val(view.typeinfo.height);
+      	$("#typeinfo-width").val(view.typeinfo.width);
+      var urlHandler = elx.host.utils.initRepositoryButtonHandler($("#typeinfo-url"),"Choose CSV",
+                                                                  "csv");
+  	
+  	$("#typeinfo-url-repo-button").click(function(){
+  		urlHandler();
+  	});
+  
+      $("#typeinfo-cellSize").val(view.typeinfo.cellSize);
+	  $("#typeinfo-legendSpacing").val(view.typeinfo.legendSpacing);
+	  $("#typeinfo-legendArr").val(view.typeinfo.legendArr);
+	},
+
+	validate : function(view) {
+		return true;
+	},
+
+	save : function(view) {
+      var cHeight = $("#typeinfo-height").val();
+		view.typeinfo.height = cHeight;
+      	var cWidth = $("#typeinfo-width").val();
+		view.typeinfo.width = cWidth;
+      var newUrl =  $.trim($("#typeinfo-url").val());
+      	view.typeinfo.url=newUrl;
+      	var dEvent = $("#typeinfo-eventCol").val();
+		view.typeinfo.data.eventCol = dEvent;
+      	var dStartTime = $("#typeinfo-startTimeCol").val();
+		view.typeinfo.data.startTimeCol = dStartTime;
+      	var dLeaveType = $("#typeinfo-leaveTypeCol").val();
+		view.typeinfo.data.leaveTypeCol = dLeaveType;
+      	var dNumberDays = $("#typeinfo-numberDaysCol").val();
+		view.typeinfo.data.numberDaysCol = dNumberDays;
+ 
+       var cCellSize = $("#typeinfo-cellSize").val();
+		view.typeinfo.cellSize = cCellSize;
+		var cLegendSpacing = $("#typeinfo-legendSpacing").val();
+		view.typeinfo.legendSpacing = cLegendSpacing;
+		var cLegendArr = $("#typeinfo-legendArr").val();
+		view.typeinfo.legendArr = cLegendArr;
+    }
+	
+}
+========
+<<<<<<<=view-html=
+<style type='text/css'>
+#${id} {
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
+  
+}
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.RdYlGn .q0-11{fill:#1f77b4}
+.RdYlGn .q1-11{fill:#aec7e8}
+.RdYlGn .q2-11{fill:#ff7f0e}
+.RdYlGn .q3-11{fill:#ffbb78}
+.RdYlGn .q4-11{fill:#2ca02c}
+.RdYlGn .q5-11{fill:#98df8a}
+.RdYlGn .q6-11{fill:#d62728}
+  .RdYlGn .q7-11{fill:#ff9896}
+.RdYlGn .q8-11{fill:#9467bd}
+.RdYlGn .q9-11{fill:#c5b0d5}
+.RdYlGn .q10-11{fill:#8c564b}
+.RdYlGn .q11-11{fill:#c49c94}
+ .RdYlGn .q12-11{fill:#e377c2}
+.RdYlGn .q13-11{fill:#f7b6d2}
+.RdYlGn .q14-11{fill:#7f7f7f}
+.RdYlGn .q15-11{fill:#c7c7c7}
+ .RdYlGn .q16-11{fill:#bcbd22}
+ .RdYlGn .q17-11{fill:#dbdb8d}
+  .RdYlGn .q18-11{fill:#17becf}
+ .RdYlGn .q19-11{fill:#9edae5}
+    
+</style>
+<div class='body'>
+
+</div>
+<div id='${id}' >    
+  </div>
+
+	
+<div class='elx-script'>
+var $, div, getDefaultOffDays, holidayItem, monthPath, sundayFn, testdate, url1, view;
+  var text="Annual Leave"; 
+console.log("d.split()[0]",text.split(" ")[0]);
+  $ = jQuery;
+div = $("#${id}");
+
+view = elx.host.getViewById("${id}");
+
+testdate = "2013-12-31T16:00:00Z";
+url1 = elx.host.utils.fixRepositoryUrl(view.typeinfo.url);
+  console.log("url1: ",url1);
+holidayItem = [];
+var csv=${code};
+  
+ 
+d3.csv(url1, function(error, urlData) {
+    var Leave_TypeArr,  color, csv1, csv2, csv3, data, date, day, format,  holiday_Color, 
+  legend, legendArr, legendDiv, month, percent, rect, sundayArr, sunday_Color, svg, totalSunday, week,  year;
+    csv1 = []; csv3 = [];csv2 = [];
+   var width,height,cellSize;
+  width = view.typeinfo.width;
+    height = view.typeinfo.height;
+    cellSize = view.typeinfo.cellSize;
+    legendArr = view.typeinfo.legendArr;
+    Leave_TypeArr = legendArr.split(",");
+    Leave_TypeNum=Leave_TypeArr.length;
+   if (0< csv.length) 
+  {
+  	csv.forEach(function(d, i) {
+        csv1.push({
+            Event: d[view.typeinfo.data.eventCol],
+            Start_of_Leave: d[view.typeinfo.data.startTimeCol],
+            Number_of_Days: d[view.typeinfo.data.numberDaysCol],
+            Leave_Type: d[view.typeinfo.data.leaveTypeCol]
+        });
+    });
+  
+    
+  
+    csv1.forEach(function(d, i) {
+        csv2.push({
+            Event: d.Event,
+            Start_of_Leave: d.Start_of_Leave,
+            Number_of_Days: _.range(0, d.Number_of_Days),
+            Leave_Type: d.Leave_Type
+  		
+        });
+    });
+  
+    day = d3.time.format("%w");
+    year = d3.time.format("%Y");
+    month = d3.time.format("%m");
+    date = d3.time.format("%e");
+    week = d3.time.format("%U");
+    percent = d3.format(".1%");
+    format = d3.time.format("%Y-%m-%d");
+    csv2.forEach(function(d, i) {
+        d.Number_of_Days.forEach(function(m, n) {
+            var Days_withLeaves, startLeave;
+            startLeave = new Date(d.Start_of_Leave);
+            if (startLeave !== "Invalid Date") {
+                Days_withLeaves = format(new Date(year(startLeave), month(startLeave) - 1, parseInt(date(startLeave)) + m));
+                csv3.push({
+                    Date: Days_withLeaves,
+                    Event: d.Event,
+                    Leave_Type: d.Leave_Type,
+                    Number_of_Days: m,
+  					Year:year(new Date(Days_withLeaves))
+                });
+            }
+        });
+    });
+  }
+  totalSunday = [];year = d3.time.format("%Y");
+  if(0>=csv.length) {
+  
+  	minYear=parseInt(year(new Date(urlData[0].Start_of_Leave))); maxYear=minYear;}
+  else{
+  var yearArr=_.pluck(csv3,'Year');
+  var minYear=parseInt(_.min(yearArr));
+  var maxYear=parseInt(_.max(yearArr));}
+   sundayArr = sundayFn(minYear,maxYear,totalSunday);
+  
+   sundayArr.forEach(function(d, i) {
+        csv3.push({
+  			Date:d,
+            Event: "Sunday",
+            Number_of_Days: 1,
+            Leave_Type: "Sunday",
+            Year:year(new Date(d))
+  			   });
+  }); 
+     urlData.forEach(function(val, key) {
+       
+        csv3.push({
+            Event: val.Event,
+            Date: val.Start_of_Leave,
+            Number_of_Days: val.Number_of_Days,
+            Leave_Type: val.Leave_Type,
+ 		 Year:year(new Date(val.Start_of_Leave))
+  			
+        });
+    });
+  console.log("csv3",JSON.stringify(csv3));
+  window.csv3=csv3;
+  window.Leave_TypeArr=Leave_TypeArr;
+  window.minYear=minYear;
+  window.maxYear=maxYear;
+    
+
+ function getDefaultOffDays(year) {
+     var offdays = new Array();
+     i = 0;
+     for (month = 0; month < 12; month++) {
+         tdays = new Date(year, month + 1, 0).getDate();
+
+         for (date = 1; date <= tdays; date++) {
+             smonth = (month < 9) ? "0" + (month + 1) : (month + 1);
+             sdate = (date < 10) ? "0" + date : date;
+             dd = year + "-" + smonth + "-" + sdate;
+             var day = new Date(year, month, date);
+             if (day.getDay() == 0) {
+                 offdays[i++] = dd;
+             }
+         }
+     }
+ 
+     return offdays;
+ }
+
+ function sundayFn(from, to,totalSunday) {
+     (_.range(from, to + 1)).forEach(function(d, i) {
+
+         sunArr = getDefaultOffDays(d);
+         totalSunday.push(sunArr);
+     })
+     return _.flatten(totalSunday);
+ }
+  test=1;
+  setTimeout(maybe(width,height,cellSize), 0);
+  // setTimeout(autoResize,0);
+});
+ function maybe(width,height,cellSize) {
+
+  color = d3.scale.ordinal().domain(window.Leave_TypeArr).range(d3.range(20).map(function(d) {
+        return "q" + d + "-11";
+    }));
+    holiday_Color = "#FFFF00";
+    sunday_Color = "#0000FF";
+    day = d3.time.format("%w");
+    year = d3.time.format("%Y");
+    month = d3.time.format("%m");
+    date = d3.time.format("%e");
+    week = d3.time.format("%U");
+    percent = d3.format(".1%");
+    format = d3.time.format("%Y-%m-%d");
+    svg = d3.select("#${id}").selectAll("svg").data(d3.range(window.minYear, window.maxYear + 1)).enter()
+  .append("svg")
+  .attr("width", width).attr("height", height).attr("class", "RdYlGn").append("g").attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+    svg.append("text").attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)").style("text-anchor", "middle").text(function(d) {
+        return d;
+    });
+    rect = svg.selectAll(".day").data(function(d) {
+  		
+        return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1));
+    }).enter().append("rect").attr("class", "day").attr("width", cellSize).attr("height", cellSize).attr("x", function(d) {
+        return week(d) * cellSize;
+    }).attr("y", function(d) {
+        return day(d) * cellSize;
+    }).datum(format);
+    rect.append("title").text(function(d) {
+        return d;
+    });
+  
+    svg.selectAll(".month").data(function(d) {
+        return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1));
+    }).enter().append("path").attr("class", "month").attr("d", monthPath);
+    data = d3.nest().key(function(d) {
+        return d.Date;
+    }).rollup(function(d) {
+  
+        return {
+ 			 
+            Event: d[0].Event,
+            Number_of_Days: d[0].Number_of_Days,
+            Leave_Type: d[0].Leave_Type
+        };
+    }).map(window.csv3);
+  
+    rect.filter(function(d) {
+        return d in data;
+    }).attr("class", function(d) {
+        return "day " + color(data[d].Leave_Type);
+    }).select("title").text(function(d) {
+        return d + ": " + data[d].Event + ", Leave Type: " + data[d].Leave_Type;
+    });
+    legendDiv = d3.select("#${id}");
+    legend = legendDiv.append("svg").attr("class", "RdYlGn").attr("width", 960).append("g")
+  			.attr("class", "Legend").attr("x", 20).attr("y", 0).attr("height", 0).attr("width", 960);
+    legend.selectAll("g").data(window.Leave_TypeArr).enter().append("g").each(function(d, i) {
+        var g;
+        g = d3.select(this);
+  var xIndex=Math.floor(i/2); var yIndex=i%2;
+        g.append("rect").attr("x", xIndex * view.typeinfo.legendSpacing).attr("y", yIndex*15+5).attr("width", 10).attr("height", 10)
+  						.attr("class", "day " + color(d));
+        g.append("text").attr("x", xIndex * view.typeinfo.legendSpacing + 10).attr("y",yIndex*15+12).attr("height", 30)
+  .attr("width", 15).text( d.split("Leave")[0]);
+    });
+  // d3.select(self.frameElement).style("height", "2910px");
+    
+  function monthPath(t0) {
+  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+      d0 = +day(t0), w0 = +week(t0),
+      d1 = +day(t1), w1 = +week(t1);
+  
+  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+      + "H" + w0 * cellSize + "V" + 7 * cellSize
+      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+      + "H" + (w1 + 1) * cellSize + "V" + 0
+      + "H" + (w0 + 1) * cellSize + "Z";
+}
+}
+  function autoResize(){
+  	elx.host.setupAutoResize(div, function(w,h){
+  		console.log("Asd",window.minYear);
+  c=view.typeinfo.cellSize;
+  
+  		if(w !== view.typeinfo.width || h != view.typeinfo.height){
+  			view.typeinfo.height = h;
+  			view.typeinfo.width = w;
+  			
+  			$("#${id}").empty();
+    		}
+  //setTimeOut(maybe(w,h,c),0);
+    maybe(w,h,c);
+  });}
+   
+</div>
+========
