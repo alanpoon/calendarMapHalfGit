@@ -586,7 +586,8 @@
       "height":190,
       "cellSize":17,
       "legendSpacing":120,
-      "legendArr":"Marriage,Urgent,Annual,Child Care,Compassionate,Hospitalisation,Holiday,Medical,National Service,No Pay,Off-In-Lieu,Sunday"
+      "legendArr":"Marriage,Urgent,Annual,Child Care,Compassionate,Hospitalisation,Holiday,Medical,National Service,No Pay,Off-In-Lieu,Sunday",
+      "formatDate":"%e-%m-%Y"
     }
   },
   "includes":["/elx/lib/d3.v3.min.js"],
@@ -783,6 +784,20 @@
         "value":"${typeinfo.legendArr}",
         "readonly":false
       }]
+    },{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-formatDate-label",
+        "type":"label",
+        "text":"FormatDate "
+      },{
+        "jsonClass":"Field",
+        "id":"typeinfo-formatDate",
+        "type":"field",
+        "value":"${typeinfo.formatDate}",
+        "readonly":false
+      }]
     }]
   }]
 }
@@ -792,25 +807,22 @@ elx.bundle.type.calendarMapHalf = {
 
   	init : function(view) {
       
-   $("#typeinfo-height").val(view.typeinfo.height);
-      	$("#typeinfo-width").val(view.typeinfo.width);
+
       var urlHandler = elx.host.utils.initRepositoryButtonHandler($("#typeinfo-url"),"Choose CSV",
-                                                                  "csv");
-  	
+                                                       "csv");
+  	  elx.host.utils.initSectionGroups(view,$("#calendarMapHalf-div"));         
   	$("#typeinfo-url-repo-button").click(function(){
   		urlHandler();
+      
   	});
   
-      $("#typeinfo-cellSize").val(view.typeinfo.cellSize);
-	  $("#typeinfo-legendSpacing").val(view.typeinfo.legendSpacing);
-	  $("#typeinfo-legendArr").val(view.typeinfo.legendArr);
-      
-      $("#typeinfo-startTimeCol").val(view.typeinfo.data.startTimeCol);
+          $("#typeinfo-startTimeCol").val(view.typeinfo.data.startTimeCol);
       $("#typeinfo-leaveTypeCol").val(view.typeinfo.data.leaveTypeCol);
        $("#typeinfo-durationCol").val(view.typeinfo.data.durationCol);
        $("#typeinfo-numOfDaysCol").val(view.typeinfo.data.numOfDaysCol);
        $("#typeinfo-eventCol").val(view.typeinfo.data.eventCol);
        $("#typeinfo-partialCol").val(view.typeinfo.data.partialCol);
+      
 	},
 
 	validate : function(view) {
@@ -819,11 +831,8 @@ elx.bundle.type.calendarMapHalf = {
 
 	save : function(view) {
       
-      var cHeight = $("#typeinfo-height").val();
-		view.typeinfo.height = cHeight;
-      	var cWidth = $("#typeinfo-width").val();
-		view.typeinfo.width = cWidth;
-      var newUrl =  $.trim($("#typeinfo-url").val());
+   	elx.host.utils.saveProperties(view.typeinfo);
+        var newUrl =  $.trim($("#typeinfo-url").val());
       	view.typeinfo.url=newUrl;
       	var dEvent = $("#typeinfo-eventCol").val();
 		view.typeinfo.data.eventCol = dEvent;
@@ -837,12 +846,6 @@ elx.bundle.type.calendarMapHalf = {
 		view.typeinfo.data.numOfDaysCol = dNumOfDays;
        var dPartial = $("#typeinfo-partialCol").val();
       view.typeinfo.data.partialCol = dPartial;
-       var cCellSize = $("#typeinfo-cellSize").val();
-		view.typeinfo.cellSize = cCellSize;
-		var cLegendSpacing = $("#typeinfo-legendSpacing").val();
-		view.typeinfo.legendSpacing = cLegendSpacing;
-		var cLegendArr = $("#typeinfo-legendArr").val();
-		view.typeinfo.legendArr = cLegendArr;
     }
 	
 }
@@ -877,12 +880,14 @@ elx.bundle.type.calendarMapHalf = {
 
 <div class='elx-script'>
 var $, div, getDefaultOffDays, holidayItem, monthPath, sundayFn, testdate, url1, view;
- var leave_TypeArr,minYear,maxYear; //variable to be called by maybe
+ var leave_TypeArr,minYear,maxYear,csv4; //variable to be called by maybe
+ 
   $ = jQuery;
 div = $("#${id}");
 
 view = elx.host.getViewById("${id}");
-
+var formatDate;
+   var dateFormat=d3.time.format(view.typeinfo.formatDate);
 testdate = "2013-12-31T16:00:00Z";
 url1 = elx.host.utils.fixRepositoryUrl(view.typeinfo.url);
   
@@ -891,7 +896,7 @@ var csv=${code};
 
 console.log("csv",JSON.stringify(csv));
  d3.csv(url1, function(error, urlData) {
-            var color, csv1, csv2, csv3, csv4, data, date, day, format, holiday_Color,
+            var color, csv1, csv2, csv3, data, date, day, format, holiday_Color,
                 legend, legendArr, legendDiv, month, percent, rect, sundayArr, sunday_Color, svg, totalSunday, week, year;
             csv1 = [];
             csv3 = [];
@@ -1134,7 +1139,7 @@ function maybe(width, height, cellSize) {
         return day(d) * cellSize;
     }).datum(format);
     rect.append("title").text(function(d) {
-        return d;
+        return dateFormat(new Date(d));
     });
 
     svg.selectAll(".month").data(function(d) {
@@ -1159,7 +1164,7 @@ function maybe(width, height, cellSize) {
         })
         .select("title").text(function(d) {
             var plural = (data[d].Num_of_Days > 1) ? " days" : " day";
-            return d + ": " + data[d].Event + ", " + data[d].Leave_Type + ", " + data[d].Num_of_Days + plural;
+            return dateFormat(new Date(d)) + ": " + data[d].Event + ", " + data[d].Leave_Type + ", " + data[d].Num_of_Days + plural;
         });
     legendDiv = d3.select("#${id}").selectAll("svg.RdYlGn");
     legend = legendDiv.append("svg").attr("class", "RdYlGn").attr("width", 960).append("g")

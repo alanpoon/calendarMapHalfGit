@@ -1,0 +1,48 @@
+
+      
+   $("#typeinfo-height").val(view.typeinfo.height);
+      	$("#typeinfo-width").val(view.typeinfo.width);
+      var urlHandler = elx.host.utils.initRepositoryButtonHandler($("#typeinfo-url"),"Choose CSV",
+        elx.host.utils.initSectionGroups(view,$("#calendarMapHalf-div"));                                                          "csv");
+  	
+  	$("#typeinfo-url-repo-button").click(function(){
+  		urlHandler();
+  	});
+  
+      $("#typeinfo-cellSize").val(view.typeinfo.cellSize);
+	  $("#typeinfo-legendSpacing").val(view.typeinfo.legendSpacing);
+	  $("#typeinfo-legendArr").val(view.typeinfo.legendArr);
+      
+      $("#typeinfo-startTimeCol").val(view.typeinfo.data.startTimeCol);
+      $("#typeinfo-leaveTypeCol").val(view.typeinfo.data.leaveTypeCol);
+       $("#typeinfo-durationCol").val(view.typeinfo.data.durationCol);
+       $("#typeinfo-numOfDaysCol").val(view.typeinfo.data.numOfDaysCol);
+       $("#typeinfo-eventCol").val(view.typeinfo.data.eventCol);
+       $("#typeinfo-partialCol").val(view.typeinfo.data.partialCol);
+	   
+	   
+	   
+	      var cHeight = $("#typeinfo-height").val();
+		view.typeinfo.height = cHeight;
+      	var cWidth = $("#typeinfo-width").val();
+		view.typeinfo.width = cWidth;
+      var newUrl =  $.trim($("#typeinfo-url").val());
+      	view.typeinfo.url=newUrl;
+      	var dEvent = $("#typeinfo-eventCol").val();
+		view.typeinfo.data.eventCol = dEvent;
+      	var dStartTime = $("#typeinfo-startTimeCol").val();
+		view.typeinfo.data.startTimeCol = dStartTime;
+      	var dLeaveType = $("#typeinfo-leaveTypeCol").val();
+		view.typeinfo.data.leaveTypeCol = dLeaveType;
+      	var dDuration = $("#typeinfo-durationCol").val();
+		view.typeinfo.data.durationCol = dDuration;
+		var dNumOfDays = $("#typeinfo-numOfDaysCol").val();
+		view.typeinfo.data.numOfDaysCol = dNumOfDays;
+       var dPartial = $("#typeinfo-partialCol").val();
+      view.typeinfo.data.partialCol = dPartial;
+       var cCellSize = $("#typeinfo-cellSize").val();
+		view.typeinfo.cellSize = cCellSize;
+		var cLegendSpacing = $("#typeinfo-legendSpacing").val();
+		view.typeinfo.legendSpacing = cLegendSpacing;
+		var cLegendArr = $("#typeinfo-legendArr").val();
+		view.typeinfo.legendArr = cLegendArr;
