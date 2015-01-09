@@ -1130,6 +1130,15 @@ function maybe(width, height, cellSize) {
 
             return d;
         });
+  	var monthArr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug","Sep","Oct","Nov","Dec"];
+    var monthSvg = svg.selectAll(".RdYlGn").data(monthArr).enter().append("text").attr("transform", function(d, i) {
+            return "translate(" + (cellSize * i*4.333 + 30) + "," + 130 + ")";
+        }).style("text-anchor", "middle")
+        .text(function(d, i) {
+
+            return d;
+        });
+  
     rect = svg.selectAll(".day").data(function(d) {
 
         return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1));
