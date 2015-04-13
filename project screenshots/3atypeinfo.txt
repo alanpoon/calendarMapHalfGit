@@ -1,0 +1,19 @@
+{
+   "jsonClass":"Bundle",
+   "type":"calendarMapHalf",
+   "data":{
+      "startTimeCol":"ds_3a_Calendar.StartDate",
+      "leaveTypeCol":"tbl_leavetype.LeaveTypeName",
+      "durationCol":"ds_3a_Calendar.Duration_actual",
+      "numOfDaysCol":"ds_3a_Calendar.Number_of_Days",
+      "eventCol":"ds_3a_Calendar.EmpName",
+      "partialCol":"ds_3a_Calendar.PartialDay"
+   },
+   "url":"repository:/HCBI/datasource/data/3a1HolidayCSV.csv",
+   "width":"980",
+   "height":"190",
+   "cellSize":"17",
+   "legendSpacing":"120",
+   "legendArr":"Marriage,Urgent,Annual,Child Care,Compassionate,Hospitalisation,Holiday,Medical,National Service,No Pay,Off-In-Lieu,Sunday",
+   "formatDate":"%e-%m-%Y"
+}
